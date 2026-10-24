@@ -11215,9 +11215,11 @@ textarea.form-control-lg {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
-/* 增大字体大小 */
-* {
-    font-size: 1.3rem;
+/* A stable root size prevents rem values from compounding across the page. */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 .navbar {
@@ -12163,11 +12165,68 @@ body.disclaimer-open{overflow:hidden}
 .disclaimer-fallback-backdrop{position:fixed;inset:0;z-index:2090;background:#06111dcc}#disclaimerDialog.disclaimer-fallback{display:block;position:fixed;left:50%;top:50%;right:auto;bottom:auto;margin:0;transform:translate(-50%,-50%);z-index:2100}
 #aboutView .about-disclaimer-button{font-size:1rem;margin:.25rem 0 .75rem}
 @media(max-width:575px){#disclaimerDialog{width:calc(100% - 1.25rem);max-height:calc(100vh - 1.25rem);max-height:calc(100dvh - 1.25rem);border-radius:11px}#disclaimerDialog .disclaimer-header{padding:1rem 1.1rem .85rem}#disclaimerDialog .disclaimer-body{padding:1rem 1.1rem .1rem}#disclaimerDialog .disclaimer-footer{padding:.8rem 1.1rem 1rem}#disclaimerDialog p,#disclaimerDialog a{font-size:.95rem}#disclaimerTitle{font-size:1.25rem}}
+/* Keep mobile text compact without disabling the visitor's pinch-to-zoom controls. */
+.navbar .nav-title{font-size:1.75rem}
+.home-intro{font-size:1.05rem;line-height:1.75;margin-bottom:0}
+@media(max-width:767px){
+ body{font-size:14px;line-height:1.65;padding-top:64px}
+ .navbar{min-height:60px;padding-top:8px;padding-bottom:8px}
+ .navbar>.container-fluid{column-gap:8px;row-gap:8px}
+ .navbar-brand{margin-right:0;padding:0;line-height:1}
+ .navbar-brand img{width:32px!important;height:32px!important}
+ .navbar .nav-title{flex:1;min-width:0;font-size:17px!important;line-height:1.35;white-space:nowrap;margin:0!important}
+ .navbar-toggler{width:44px;height:40px;padding:6px;font-size:16px}
+ .navbar-toggler-icon{width:22px;height:22px}
+ .navbar-nav{gap:2px!important}
+ .nav-link{font-size:14px;line-height:1.5;padding:8px;min-height:40px}
+ main.container-fluid{margin-top:12px!important;padding-left:12px;padding-right:12px}
+ #homeView>.row.mt-4,#queryForm{margin-top:16px!important}
+ #homeView>.row:first-child{margin-top:0!important}
+ .card-header{padding:10px 12px}
+ .card-body{padding:12px}
+ .card-body p,.card-body li,.card-body p a,.card-body label{font-size:14px;line-height:1.7}
+ #homeView .home-intro{font-size:14px;line-height:1.7;margin-bottom:0}
+ .h5-card-header{font-size:16px;line-height:1.5;overflow-wrap:anywhere}
+ .result-heading{gap:3px 10px}
+ .result-heading .fs-3{font-size:16px!important;line-height:1.5}
+ #resultList .list-group-item{padding:10px 4px;gap:8px}
+ #resultList .list-group-item>span:first-child,#resultList .list-group-item>span:last-child{font-size:14px!important;line-height:1.6}
+ .query-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 60px;gap:8px;margin-left:0;margin-right:0}
+ .query-row>.col-auto,.query-row>.city-col{width:auto;min-width:0;padding:0!important;order:0!important;flex:initial!important}
+ .query-row>.city-col{grid-column:1/3}
+ .query-row .form-select,.query-row .btn{width:100%;font-size:14px;line-height:1.4;min-height:44px;padding:9px 10px}
+ .query-row .form-select{padding-right:28px;background-position:right 8px center;background-size:14px 10px}
+ .form-control,.form-control-lg,.city-index-fields select{font-size:16px;line-height:1.4;min-height:44px;padding:9px 10px}
+ .city-results{left:0;right:0}
+ .city-results button{font-size:14px;line-height:1.5;min-height:44px;padding:10px}
+ .ip-location-note{gap:6px 8px}
+ .ip-location-note,.ip-location-note span,.ip-location-note button{font-size:12px;line-height:1.6}
+ .ip-location-note button{padding:6px 8px;min-height:36px}
+ .city-index-fields label{font-size:13px}
+ .small-note,.small-note a,.query-status,.ip-diagnostics summary,.ip-diagnostics p,.ip-diagnostics li{font-size:12px;line-height:1.65}
+ .query-status{margin:10px 0 0}
+ .action-row a,.action-row button,.record-row button,.card-body>.btn{font-size:14px;line-height:1.5;min-height:44px;padding:10px 12px}
+ .home-map-name{font-size:14px}
+ .home-map-note{font-size:11px;line-height:1.6}
+ .region-map-toolbar select,.region-map-toolbar button{font-size:14px;line-height:1.5;min-height:44px}
+ .region-map-controls label,.map-status,.map-samples summary{font-size:12px;line-height:1.6}
+ .local-table td,.local-table th{font-size:13px;line-height:1.5;padding:8px}
+ .formula{font-size:12px;line-height:1.6;padding:12px}
+ .card-body summary,.record-row span{font-size:14px;line-height:1.6}
+ .footer-custom-dark p,.footer-custom-dark a,.footer-custom-dark b{font-size:12px;line-height:1.7}
+}
+@media(max-width:359px){
+ .navbar .nav-title{font-size:16px!important}
+ main.container-fluid{padding-left:10px;padding-right:10px}
+ .query-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 56px;gap:6px}
+ .query-row .form-select,.query-row .btn{padding-left:7px;padding-right:7px}
+ .query-row .form-select{padding-right:24px}
+}
 </style></head><body>
 <nav class="navbar navbar-expand-lg navbar-dark custom-nav-bg-dark">
  <div class="container-fluid">
   <a class="navbar-brand" href="#home" aria-label="主页"><img id="siteLogo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wEEEAA9AD0APQA9AEEAPQBFAE0ATQBFAGAAaABcAGgAYACOAIMAdwB3AIMAjgDXAJoApQCaAKUAmgDXAUYAzADuAMwAzADuAMwBRgEgAV0BHAEJARwBXQEgAgYBlwFpAWkBlwIGAlcB9wHcAfcCVwLWAokCiQLWA5IDZAOSBKoEqgZFEQA9AD0APQA9AEEAPQBFAE0ATQBFAGAAaABcAGgAYACOAIMAdwB3AIMAjgDXAJoApQCaAKUAmgDXAUYAzADuAMwAzADuAMwBRgEgAV0BHAEJARwBXQEgAgYBlwFpAWkBlwIGAlcB9wHcAfcCVwLWAokCiQLWA5IDZAOSBKoEqgZF/8IAEQgCWAJYAwEiAAIRAQMRAf/EABkAAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/aAAgBAQAAAADygAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBQAAAAAAAAAAZAAKFAAAAAAAAAyAAAaAAAAAAAABkAAUoAAAAAAAADIDQAAAAAAAAAAGQApQAAAAAAAAAACCgCUAAqAAAAAAAAAEooAAABAAAAAAAMbFAAAAAIAAAAABjYUAAAAACAAAAAMbCgAAAAABAAUIAHLWxQACIAKBQBAUAgBOOuoUAEkABm0FABoAEAHPdCgBMgAYy6gAA2ABADnuhQAkgAM4dKAAGwAEAc90KAAggElAAA2AAQDnrQKAAADHJ03kAAbAAIDnl1oUAAAGOTfSQAA2AAIMcy9goAAAM8WugEAGwAAhyyO1ClAEAGeLXYAAigAAjHMvajWgABESM8V7gAAAAAjni9tA2AAAGfKd6AAAAAW3PPDuBqgAc5HYJ5D1MgAAABboTjmdwLoADy9nL0hPIenaTIAAANaAcMO4DYAHm9E4ekJ5D0dAmYAABugDjzdwGqADyw9OhPId+oDOQADdABwme4C6AB5sHp2J5Dt2AGcgBrQADhh3ANgMy682DqvZPIde4AM5A1oAAedO8AbAcuDpMBv0p5Dp6AAJmDdAADzyerADVA5cAFetPIb9IABnN2AAB58vUwBdAcuAA9Wp5DXqAAGdAAAPOz6kyxHRsDn5wB6dzyF9YzmW7AAABzkczt0ZnHF9DpsHLyADv1nkL6qebA9WgAGGwPNgGvU1nzYvpb6g5eIAde88g6Na45Hp2TF2DPPjfRqpXlyC+3oeHnfSvcHLxADp6J5AAPTsnk36Q48oNd5ns8kA37q8PN6jtoOfhAGvoY8AAHT0GfLurdecA16HlAO3seDD1HToGPAAHv18+AA6aJzuTVwAL14gF+i8GHqL3DHgADq5AAAayakAAAL9F8/L0073G2fngAAAANZNMgAAF+jn5563PW+XH6LPzwAAAAFhUAAAH0efiPR6PDrbj9Cz5wAAAACwAAAA9WOB19vzXTXH3dOHkAAAAAWAAAAANdvOCwAAAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0yAAAAAAAAAAAB0cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAAAAAAACgAAAAAAAAQAKAAAVAAAAAAAAAAALcjTKy6kgAA0yAAAAAAF1gakazdMwAAAAAAAAALrMNQsaZgAAAAAAAAAasyUaDMAAAAAAABYANWZKWhmABUAAAKQAVABtMlNAzAA3MgAKIoQFCAGqmSmgZgAupkABRFAigIBdEyVaDMAGqwABQjQAAkA3UzFNUGIANWZFEDQRQABBC23MiroDEAGkg0MhoAAAAkWoBdAYgA0kGhAoEoAAEi2ALQMwAaSFoAAhQAAkWwBQGQA0kLQABBQABIoAoDJYC1IWgAEBQABlQCgAZFKkLQAIAKAAyoBQAMjQMmgAIABQAZUAoAGRoGTQAQH//xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/9oACAECEAAAANgBAAAABQAgAAACAUqAAAAMgKtgAAADItUEAAAAAoGYAClAAVATIABSqCRaErAAACrcoNUSswKAACAuhKmQoAAIBdEpgAFACALqS1mABQAgBpKYyAq2wAAJNqTmC2RrWLQASQu6OQNGWtYi2gTILujGRbqZmtYgtozANVozguw561nILWQDVx0pyLsMXWcqgCwuqxOhyyvYMXUzdMSourmLozx6dHPmvcMXQMTTUURRydU4L3DLQIsoAHN0l5M9wABKABi65dZnn3AAAAAJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEqVFAAAABFJGgAAAShm1ItCKAIVCiS1ItDNoIWAFMtGS0IqKgAAUZLQlQAsAKUkFCVACoAqjIFRUAoIBaSAqFQKP//EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/9oACAEDEAAAAIAFoAAABkANAAAAEAQ0AAAAAES0AAAAIQGgAAAAkAu7QCIkAAZUG9AABJIC6ucAXoAgKBMzdDGQOoJgEoojoBzgN6BIhAA6ATmDWwAYm8AOgDOAdaAhibAKAYyp12Aic8dQABbeOab6gxLty590gAttMcaXtQ5x1cuffSSQLbQxyDrsjHLe98ufbYkkXVAxz1g31M8LF9HLn16AmboA58+/LK9zPAPRz59ekjQCUxzk7a4S9tM8A7Z573nm9Fipyx02zyNd+fK9OiecOs5g7b5MVkauB1cre6ecNMg0msAAdHPU6tecAAayABuZ68ta3wAAFgAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWLFQAAAAGpFpkAAKgWBqRaZCoCikUkLZGhkNSA0igIKytGQ1JbI0FAMrkuiZDUmgUigMkNUmRdZmqBBQMyjQSS25mqEAoMyjQMzVZmwg//xAAuEAABAwIFBAEEAgIDAAAAAAABAAIRMDEDECAyQBITIVBgQVFhcSKAM0NScIH/2gAIAQEAAT8A/pZKlSpUqVKlSp+JSpUqf+k4UKPgMfGTb3EKFChQoUKFFM2+Fut8LehYfCnoWHwp6Fh8JPhF0pruLKlSpUqVKlSpUqVKlSpU+kd5GTRJ4U1ZC6gpFCVKlSpUqVKlTyH3TbDgms6+Yt6h902w4UVXZi3qH3TbDjQoUKFChQoUItJXS36uXQz/AJoCPUPum2577DNij0xccgSEDPOfbNl1PpXnQDHOdbNt1BUKCoUKCoPPdfSLChBUFQVBXSV0ldJXSVBUFQVBpOsc23HpnjQBJ1DgwFAXSF0rpKg5Gx9U5sZASYQAHOcBB9NBXSoGT1HglN3CgK3cau6Psu7+EMQkganbToaAWhdKg82Cg0aSE/6IbXJu4UBWaJMLtBdtqPh+p206GbRnC6VB48Lpo4twp8EJu4UBWHh6kfcLrb904gu1OsdGHt1QF08OCop4twgP4lN3DjOudDdo0mx0YVjR6a4CAq4twhsem3FEVX7joZtGk2OjC+tMtpwgK+LdSYITdwoiiXALuNQe0/XJ+46GvgQjilMcS7M2OjCuapbQDeDibkNrk3cERwcWwza8hOMmdTNwzNjow91aERoAlARwsTchsKZuGRFAUMWwpDwczY6GbhwCMgOJiblBj8Ju4UhQxbCm3aMjY6G7hwQOLibiv9f/AKm7hmRmXAFdYXWKWJtp4e0ZGxolwFyjiNXd/C7rV1t5JeAYhd0fZd38Lu/hEyZU/wAYQMEFNxJMRmRk++QuoUJrZF10BdAXSF0hdIXQFjNhlPCscjY6RYaH7jpZtFfrZ911t+9B+462bhn0lOZCfuyF82Hzrx9lPCvkbHT3HBdxyGL9wu41OMknSzaNB8BdxqD2k6y4C5TsTxAyC62qQcwZzNzQwy1wzPlYgh50gwdeNsp4e8ZGxrYe3Q7acmbhqe/6DUCQV1tTniDBWGbimxxYZQIcJGeLvdqaZGrG2GmDBBXghOb4NZvVIvE6HbTkzcF3HLuOXdKGISbLEdAikDBlNcHJ200sJ/SYzxN7tTD5jVi/43VMPY1O2ms1/SF3fwu7+F3fwjiEiIybuGhtwnmXGmDCL5YaQuM373fvMWGYMEasTY6oMR4EAo4r/vxG7hobccpxlxObdo0NMjJhljc8TY70LbjQ3cEfBPHFgnmGuOjB8sIVl1mbFOMBYTp8LG36H7Hfr0IuNAMEchu0LHMM0YFynNlSU582WCfKx9+Tdo/WT9jv16EX5jMYQAQsZ4dEaMEw8aMO6xjJH6yY9vS0SMsTGEQPQj0IMEFHHP0GuT/T4AlEEfCmP6TKe8vM/wBC4UKFHFhQoUKFChQoUKFChQo+bBEao98NQRzGQzPBbEp0T49UMjpOkZn3gyOg6hmfeDI1T7EUxkdY1GpCjiwoUco1TVNq8KFHENEDM2qmmMjb0poAaDmMxrNMZG3pTQFuCb0xkdMKFFSOHChRUFI3qn1Jqigb1TShQo5pzFOVKlSpUqUb1ToHpTmOYMzoHpTyI1jM6B7qFGuFCGZ0D4OdA+DnQOD/AP/EACMRAAICAgMBAAEFAAAAAAAAAAERAAIQIDAxUEBgEiEiQXD/2gAIAQIBAT8A/DHHGYzHHHHHH4qMUXgOOPxVwOPhcccccfzn4nHwOPAPAfmceHsPOPjHwBoNmIxGPrEOtuFxmOD4nHGYCxrbcT9oc1w44+R6jkEUOa4PeXHwPcd7W71UrgxYrg97PR8I7xU6W0He9cHdxwniGQXuO964tlGI8oiEWDGowRmzBjMZlSWNj3K4IcRg4lhRQyulgximbjI7G1ipUvc4rDEIhBqQ4NbiUyQwcjsbWDEqFuhEMHmv/UpgHsY/S7ESwUHY++4JlQhizFnhfycvACT4RAP+zn8HGTkfccDJyNjB948I6Dwj+Rf/xAAmEQABAwQBBQEBAAMAAAAAAAABAAIREBIgMTADIUBBUVAiMmBw/9oACAEDAQE/AOMf6HChQoUKFH48hTQfgR+LPAAIUBQFAygKAoCtCtVpUHx2+DAVoVqg52lW0cOAb4ZCkKQpCkKQpCkYwrVBpbkRHANZExySVJUlSVJ4SIzbnaFarVaVaVaUUPBInNu+V203aMeC4cUKFGbtoKArQrQrQrQrQrQrQreJwyZrhhQFCePChQoCcIxYe+biREL+00nvNepQaChRyRi/XI/0rymHuav9Ub/iKwo4IzfpfMWGRjI+p+qMMFXiadT1RmsowjhfpfE5uDD3wdo0kxUbp1PVGazhQgOJ+l7FHCDUdjg7RyGgup6p0/dbh9Vw+8Mj7g8kBXuRcTRhJCIkIiKtMirtHJmgn+qNcArwnkEVGhQkBSKkgIvJoHq4IGQup6wa6DR9WGp0cumn+s2mRR+03SuP1XH6nGTi10J5nFhXUqDBFTo5NMFOcDncVe5Ekpuubp+11PVI7A0u/kFNdKOj4I5mEBPMmje7aT/JCYiQB4I8EEj/ALCMh+AMz4UKMozNRU5DghRjFYzFDUVOQR4TxQo4zmaBQj4JQxGBzNB4ZQxGBzNB4Z5DQKKGg8M8hoKnj//Z" alt="晚霞" style="height:50px;width:50px;border-radius:5px"></a>
-  <span class="navbar-text me-3 nav-title" style="font-size:1.75rem;font-weight:bold;color:#f5eec9">火烧云分析与记录</span>
+  <span class="navbar-text me-3 nav-title" style="font-weight:bold;color:#f5eec9">火烧云分析与记录</span>
   <button class="navbar-toggler" type="button" id="menuToggle" aria-label="导航菜单" aria-controls="navbarNav" aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
   <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto" style="font-size:1.2rem;gap:1rem">
    <li class="nav-item"><a class="nav-link active" href="#home">主页</a></li><li class="nav-item"><a class="nav-link" href="#details">详情页</a></li><li class="nav-item"><a class="nav-link" href="#map">地图</a></li><li class="nav-item"><a class="nav-link" href="#records">记录</a></li><li class="nav-item"><a class="nav-link" href="#accuracy">准确率</a></li><li class="nav-item"><a class="nav-link" href="#knowledge">知识</a></li><li class="nav-item"><a class="nav-link" href="#about">关于</a></li>
@@ -12176,7 +12235,7 @@ body.disclaimer-open{overflow:hidden}
 </nav>
 <main class="container-fluid mt-5">
  <section id="homeView" class="view">
-  <div class="row mt-4"><div class="col"><div class="card text-light"><div class="card-body card-body-rounded"><p class="card-text" style="font-size:1.2rem">火烧云分析用大气截面图（主要城市）。基于 NCEP-GFS / ECMWF（云况信息）和 CAMS（霾分布）。选择日出或日落、数据源，输入城市或区县，点击下拉候选即可查询。本地版独立获取气象数据，结果为近似估算。</p></div></div></div></div>
+  <div class="row mt-4"><div class="col"><div class="card text-light"><div class="card-body card-body-rounded"><p class="card-text home-intro">查看当地及周边的朝霞、晚霞条件。选择时段和数据源，搜索城市或区县即可查询。基于 GFS / ECMWF 与 CAMS 数据，本地模型估算，仅供参考。</p></div></div></div></div>
   <form id="queryForm" class="row mt-4 flex-nowrap query-row" autocomplete="off">
    <div class="col-auto"><select class="form-select form-select-lg" id="event_selector" aria-label="观测时段"><option value="rise_1">今天日出</option><option value="set_1" selected>今天日落</option><option value="rise_2">明天日出</option><option value="set_2">明天日落</option></select></div>
    <div class="col-auto"><select class="form-select form-select-lg" id="model_selector" aria-label="数据源"><option value="GFS">数据源: GFS</option><option value="EC" selected>数据源: EC</option></select></div>
