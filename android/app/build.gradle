@@ -1,0 +1,42 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'cn.hengx.sunset'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'cn.hengx.sunset'
+        minSdk 26
+        targetSdk 35
+        versionCode 6
+        versionName '2.1.0'
+    }
+    def releaseStore = providers.environmentVariable('SUNSET_KEYSTORE').orNull
+    signingConfigs {
+        release {
+            if (releaseStore != null) {
+                storeFile file(releaseStore)
+                storePassword providers.environmentVariable('SUNSET_STORE_PASSWORD').get()
+                keyAlias providers.environmentVariable('SUNSET_KEY_ALIAS').getOrElse('sunset')
+                keyPassword providers.environmentVariable('SUNSET_KEY_PASSWORD').get()
+            }
+        }
+    }
+    buildTypes {
+        debug { applicationIdSuffix '.debug'; versionNameSuffix '-debug' }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            if (releaseStore != null) signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    lint { abortOnError true; checkReleaseBuilds true }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+}

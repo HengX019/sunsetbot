@@ -8,6 +8,13 @@
 
 > 界面参考 Sunsetbot，预测使用本项目的独立近似模型。本站与 Sunsetbot 及其作者无隶属或合作关系，未取得原站完整算法，无法保证预测结果与原站一致。
 
+## 原生 Android 版本
+
+安卓原生版源码位于 [android/](android/)，采用 MIT 许可（第三方数据和素材见目录内声明）。新增五天云海条件预测、逐小时原生图表与数据表，保留 GPS 优先、失败自动 IP 的定位流程。
+
+- [下载安装包和源码：Android v2.1.0](https://github.com/HengX019/sunsetbot/releases/tag/android-v2.1.0)
+- [安卓功能、构建方法与许可](android/README.md)
+
 ## 功能
 
 - **自动显示当地晚霞**：关闭访问声明后，根据访问者的公网 IP 识别大致城市，查询今天的晚霞。

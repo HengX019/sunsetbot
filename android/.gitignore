@@ -1,0 +1,32 @@
+.gradle/
+**/build/
+local.properties
+*.p12
+*.jks
+*.keystore
+.DS_Store
+# Local IDE files
+.idea/
+*.iml
+# Signing material, credentials and private backups
+signing/
+**/signing/
+*.pfx
+*.key
+*.pem
+*signing*backup*
+*signing*PRIVATE*
+*PRIVATE*
+*private*backup*
+*credentials*
+*secret*
+.env
+.env.*
+secrets.properties
+keystore.properties
+signing.properties
+# Generated packages are release attachments
+*.apk
+*.aab
+*.apks
+*.idsig
